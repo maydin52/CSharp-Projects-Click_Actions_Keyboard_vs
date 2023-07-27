@@ -1,0 +1,58 @@
+public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Button btn = new Button();
+            btn.Text = "Naber?";
+            btn.Left = 200;
+            btn.Top = 10;
+            btn.Width = 200;
+            btn.Height = 50;
+
+            TextBox txt = new TextBox();
+            txt.Text = "Deger yaz";
+            txt.Left = 500;
+            txt.Top = 200;
+            txt.Width = 300;
+            txt.Height = 50;
+
+            this.Controls.Add(btn);
+            this.Controls.Add(txt);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Deneme deneme = new Deneme();
+
+            Type t = typeof(Deneme);
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += "A";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += "B";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            button5.Click += Button_Click;
+            button6.Click += Button_Click;
+        }
+
+        private void Button_Click(object? sender, EventArgs e)
+        {
+            textBox2.Text += ((Button)sender).Text;
+            
+        }
+    }
